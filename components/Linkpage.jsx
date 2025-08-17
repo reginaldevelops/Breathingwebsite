@@ -79,7 +79,7 @@ const CREAM = "#f3e5ce";
 
 const Wrap = styled.main`
   min-height: 100svh;
-  background: linear-gradient(180deg, ${CREAM} 0%, #fff 100%);
+  background: linear-gradient(180deg, ${CREAM} 0%, rgba(237, 235, 229, 0.85) 100%);
   padding: 6rem 1rem 4rem;
   color: #111;
 `;

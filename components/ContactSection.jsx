@@ -35,7 +35,7 @@ export default ContactSection;
 
 /* styled-components */
 const Section = styled.section`
-  background: #f3e5ce;
+  background: linear-gradient(180deg, #f3e5ce 0%, rgba(237, 235, 229, 0.85) 100%);
   padding: 6rem 1rem;
   min-height:100vh;
 `;
