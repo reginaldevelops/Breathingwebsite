@@ -33,11 +33,9 @@ const LinksPage = () => {
   return (
     <Wrap>
       <Header>
-        <Eyebrow>Tools I trust</Eyebrow>
         <h1>Recommended Tools</h1>
         <p>
-          Curated gear and apps that make breathing and meditation simpler. No fluff—just
-          what actually helps you build a daily rhythm.
+          Curated gear and apps that make breathing and meditation simpler.
         </p>
       </Header>
 

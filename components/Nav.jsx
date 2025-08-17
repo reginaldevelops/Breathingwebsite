@@ -21,7 +21,7 @@ const Navigation = ({ alwaysScrolled = false }) => {
   return (
     <Nav $scrolled={scrolled || alwaysScrolled} role="navigation" aria-label="Primary">
       <Link href="/" className={`${lexend.className} logo`} aria-label="Guided Breathing – Home">
-        Guided Breathing
+        ◑ Guided Breathing
       </Link>
       <ul>
         <li><Link href="/links">Links</Link></li>
@@ -52,9 +52,9 @@ const Nav = styled.nav`
   transition: background .25s ease, border-color .25s ease, color .25s ease, backdrop-filter .25s ease;
 
   a {
-    color: ${({ $scrolled }) => ($scrolled ? "#111" : "white")};
+    color: ${({ $scrolled }) => ($scrolled ? "#4f4a45" : "white")};
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 550;
     outline: none;
   }
 

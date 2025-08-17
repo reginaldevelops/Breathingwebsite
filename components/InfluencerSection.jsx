@@ -65,6 +65,7 @@ const Content = styled.div`
   @media (max-width: 900px) { 
     grid-template-columns: 1fr; 
     text-align: center; 
+    gap: 1rem;
   }
 `;
 const ProfileImage = styled.div``;
@@ -88,16 +89,16 @@ const StyledImage = styled(Image)`
 const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 `;
 const SmallTitle = styled.span`
   && { font-size: .9rem; font-weight: 600; letter-spacing: 1.2px; color: #666; }
 `;
 const MainTitle = styled.h2`
-  && { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; font-weight: 700; }
+  && { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; font-weight: 700; margin:0;}
 `;
 const Description = styled.p`
-  && { font-size: 1.1rem; color: #555; line-height: 1.6; padding: 1em 0; }
+  && { font-size: 1.1rem; color: #555; line-height: 1.6; padding: 0 0; margin:0; }
 `;
 const Stats = styled.div`
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
