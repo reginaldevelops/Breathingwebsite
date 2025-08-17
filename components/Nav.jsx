@@ -3,23 +3,24 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { Lobster } from "next/font/google";
+import { Lexend } from "next/font/google";
 
-const lobster = Lobster({ subsets: ["latin"], weight: "400" });
+const lexend = Lexend({ subsets: ["latin"], weight: "400" });
 
-const Navigation = () => {
+const Navigation = ({ alwaysScrolled = false }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (alwaysScrolled) return; // als altijd true, geen scroll-listener
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [alwaysScrolled]);
 
   return (
-    <Nav $scrolled={scrolled} role="navigation" aria-label="Primary">
-      <Link href="/" className={`${lobster.className} logo`} aria-label="Guided Breathing – Home">
+    <Nav $scrolled={scrolled || alwaysScrolled} role="navigation" aria-label="Primary">
+      <Link href="/" className={`${lexend.className} logo`} aria-label="Guided Breathing – Home">
         Guided Breathing
       </Link>
       <ul>
