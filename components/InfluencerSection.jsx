@@ -1,22 +1,20 @@
-"use client"
+"use client";
 
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 export default function InfluencerSection() {
   return (
     <MotionSection variants={fade} initial="hidden" whileInView="show" viewport={{ once: true }}>
       <Content>
         <MotionProfileImage variants={fade}>
-          <Image
+          <StyledImage
             src="/diederik.jpg"
             alt="Diederik"
             width={400}
             height={250}
-            style={{ borderRadius: 20, boxShadow: "0 4px 20px rgba(0,0,0,.08)" }}
             priority
           />
         </MotionProfileImage>
@@ -44,11 +42,11 @@ export default function InfluencerSection() {
 }
 
 const fade = {
-    hidden: {opacity: 0},
-    show: {
-        opacity:1,
-        transition: {ease: 'easeOut', duration: 0.75},
-    },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { ease: "easeOut", duration: 0.75 },
+  },
 };
 
 const Section = styled.section`
@@ -64,10 +62,34 @@ const Content = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   align-items: center;
-  @media (max-width: 900px) { grid-template-columns: 1fr; text-align: center; }
+  @media (max-width: 900px) { 
+    grid-template-columns: 1fr; 
+    text-align: center; 
+  }
 `;
 const ProfileImage = styled.div``;
-const TextContent = styled.div`display: flex; flex-direction: column; gap: 1.5rem;`;
+
+const StyledImage = styled(Image)`
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  object-fit: cover;
+
+  @media (max-width: 600px) {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  @media (min-width: 601px) {
+    width: 400px !important;
+    height: 250px !important;
+  }
+`;
+
+const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
 const SmallTitle = styled.span`
   && { font-size: .9rem; font-weight: 600; letter-spacing: 1.2px; color: #666; }
 `;
