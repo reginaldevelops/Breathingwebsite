@@ -43,7 +43,7 @@ const Nav = styled.nav`
   padding: calc(1rem + env(safe-area-inset-top)) clamp(1rem, 4vw, 4rem) 1rem;
 
   background: ${({ $scrolled }) =>
-    $scrolled ? "rgba(243,229,206,0.85)" : "transparent"};
+    $scrolled ? "rgba(237, 235, 229, 0.85)" : "transparent"};
   backdrop-filter: ${({ $scrolled }) => ($scrolled ? "blur(10px)" : "none")};
   -webkit-backdrop-filter: ${({ $scrolled }) =>
     $scrolled ? "blur(10px)" : "none"};
